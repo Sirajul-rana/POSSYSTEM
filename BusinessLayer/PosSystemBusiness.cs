@@ -20,6 +20,7 @@ namespace BusinessLayer
             using (Inventory_dbDataContext db =new Inventory_dbDataContext(connection))
             {
                 _product = db.Rices.SingleOrDefault(x => x.id == secondValue);
+
                 return _product;
             }
 
