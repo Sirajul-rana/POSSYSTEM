@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="POS_System" Class="Inventory_dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JARVIS;Initial Catalog=POS_System;User ID=sa" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="POS_SystemConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BabyFood" Member="BabyFoods">
+    <Type Name="BabyFood">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_BabyFood" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bakery" Member="Bakeries">
+    <Type Name="Bakery">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="names" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_Bakery" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Drinks" Member="Drinks">
+    <Type Name="Drink">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_Drink" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fish" Member="Fishes">
+    <Type Name="Fish">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_prices" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_Fish" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ForzenFood" Member="ForzenFoods">
+    <Type Name="ForzenFood">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_ForzenFood" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Meat" Member="Meats">
+    <Type Name="Meat">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="names" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_Meat" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PaperAndPlastic" Member="PaperAndPlastics">
+    <Type Name="PaperAndPlastic">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_PaperAndPlastic" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PetFood" Member="PetFoods">
+    <Type Name="PetFood">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_PetFood" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductList" Member="ProductLists">
+    <Type Name="ProductList">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="product" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_BabyFood" Member="BabyFoods" ThisKey="id" OtherKey="product_id" Type="BabyFood" />
+      <Association Name="ProductList_Bakery" Member="Bakeries" ThisKey="id" OtherKey="product_id" Type="Bakery" />
+      <Association Name="ProductList_Drink" Member="Drinks" ThisKey="id" OtherKey="product_id" Type="Drink" />
+      <Association Name="ProductList_Fish" Member="Fishes" ThisKey="id" OtherKey="product_id" Type="Fish" />
+      <Association Name="ProductList_ForzenFood" Member="ForzenFoods" ThisKey="id" OtherKey="product_id" Type="ForzenFood" />
+      <Association Name="ProductList_Meat" Member="Meats" ThisKey="id" OtherKey="product_id" Type="Meat" />
+      <Association Name="ProductList_PaperAndPlastic" Member="PaperAndPlastics" ThisKey="id" OtherKey="product_id" Type="PaperAndPlastic" />
+      <Association Name="ProductList_PetFood" Member="PetFoods" ThisKey="id" OtherKey="product_id" Type="PetFood" />
+      <Association Name="ProductList_Rice" Member="Rices" ThisKey="id" OtherKey="product_id" Type="Rice" />
+      <Association Name="ProductList_Snack" Member="Snacks" ThisKey="id" OtherKey="product_id" Type="Snack" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rice" Member="Rices">
+    <Type Name="Rice">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_Rice" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Snacks" Member="Snacks">
+    <Type Name="Snack">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quantities" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buy_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="sell_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="product_id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductList_Snack" Member="ProductList" ThisKey="product_id" OtherKey="id" Type="ProductList" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

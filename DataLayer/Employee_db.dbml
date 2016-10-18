@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="POS_System" Class="Employee_dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JARVIS;Initial Catalog=POS_System;User ID=sa" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="POS_SystemConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employee_Details" Member="Employee_Details">
+    <Type Name="Employee_Detail">
+      <Column Name="Employee_ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Employee_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Employee_Gender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_Age" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_NID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_MaritalStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_JobPosition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_StartDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_EndDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_JobDuration" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employee_Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
